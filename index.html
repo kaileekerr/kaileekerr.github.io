@@ -11,6 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		// Add the new slick-theme.css if you want the default styling
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -88,8 +91,15 @@
 							<header>
 								<h2>Portfolio</h2>
 							</header>
-
-
+							
+							<div class="your-class">
+							    <div>your content</div>
+							    <div>your content</div>
+							    <div>your content</div>
+							</div>
+							
+							
+							
 							<div class="row">
 								<div class="4u 12u$(mobile)">
 									<article class="item">
@@ -194,6 +204,37 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+			<script type="text/javascript" src="slick/slick.min.js"></script>
+			
+			<script type="text/javascript">
+				$('.center').slick({
+				  centerMode: true,
+				  centerPadding: '60px',
+				  slidesToShow: 3,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 3
+				      }
+				    },
+				    {
+				      breakpoint: 480,
+				      settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				      }
+				    }
+				  ]
+				});		
+			</script>
 
 	</body>
 </html>
